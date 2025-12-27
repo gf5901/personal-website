@@ -1,0 +1,207 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Mark W05 Medium font for headlines */
+@font-face {
+  font-family: "Mark W05 Medium";
+  src: url("https://db.onlinewebfonts.com/t/b621d1ffb46493164fd62fb7a83ab0ff.eot");
+  src: url("https://db.onlinewebfonts.com/t/b621d1ffb46493164fd62fb7a83ab0ff.eot?#iefix") format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/b621d1ffb46493164fd62fb7a83ab0ff.woff2") format("woff2"),
+    url("https://db.onlinewebfonts.com/t/b621d1ffb46493164fd62fb7a83ab0ff.woff") format("woff"),
+    url("https://db.onlinewebfonts.com/t/b621d1ffb46493164fd62fb7a83ab0ff.ttf") format("truetype"),
+    url("https://db.onlinewebfonts.com/t/b621d1ffb46493164fd62fb7a83ab0ff.svg#Mark W05 Medium") format("svg");
+}
+
+@layer base {
+  :root {
+    /* Riot Games-Inspired Dark Theme */
+    /* Backgrounds */
+    --background: 220 20% 8%;
+    --surface: 220 18% 12%;
+    --elevated: 220 16% 16%;
+    
+    /* Text */
+    --foreground: 0 0% 98%;
+    --foreground-muted: 220 10% 65%;
+    --foreground-subtle: 220 8% 45%;
+    
+    /* Borders */
+    --border: 220 15% 25%;
+    --border-strong: 220 20% 35%;
+    --border-accent: 0 85% 60%;
+    
+    /* Legacy shadcn/ui compatibility */
+    --card: 220 18% 12%;
+    --card-foreground: 0 0% 98%;
+    --popover: 220 18% 12%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 85% 60%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 220 16% 16%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 220 16% 16%;
+    --muted-foreground: 220 10% 65%;
+    --accent: 0 85% 60%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --input: 220 15% 25%;
+    --ring: 0 85% 60%;
+    
+    /* Riot Games Accent Colors */
+    --accent-primary: 0 85% 60%;
+    --accent-primary-hover: 0 85% 55%;
+    --accent-primary-active: 0 85% 50%;
+    --accent-secondary: 45 100% 50%;
+    --accent-secondary-hover: 45 100% 45%;
+    --accent-tertiary: 180 100% 50%;
+    --accent-tertiary-hover: 180 100% 45%;
+    
+    /* Status Colors */
+    --success: 142 76% 36%;
+    --warning: 38 92% 50%;
+    --error: 0 84% 60%;
+    --info: 199 89% 48%;
+    
+    /* Spacing */
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+    --space-2xl: 3rem;
+    --space-3xl: 4rem;
+    --space-4xl: 6rem;
+    --space-5xl: 8rem;
+    
+    /* Border Radius */
+    --radius-sm: 0.25rem;    /* 4px - Buttons, small elements */
+    --radius-md: 0.5rem;     /* 8px - Cards, inputs, standard elements */
+    --radius-lg: 0.75rem;    /* 12px - Large cards, modals */
+    --radius-xl: 1rem;       /* 16px - Hero sections, large containers */
+    --radius-full: 9999px;   /* Fully rounded - Pills, badges */
+    --radius: 0.25rem;       /* Legacy compatibility */
+    
+    /* Glass Effects */
+    --glass-light-bg: rgba(255, 255, 255, 0.05);
+    --glass-light-border: rgba(255, 255, 255, 0.1);
+    --glass-light-blur: 10px;
+    --glass-medium-bg: rgba(255, 255, 255, 0.1);
+    --glass-medium-border: rgba(255, 255, 255, 0.15);
+    --glass-medium-blur: 16px;
+    --glass-strong-bg: rgba(255, 255, 255, 0.15);
+    --glass-strong-border: rgba(255, 255, 255, 0.2);
+    --glass-strong-blur: 24px;
+    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    --glass-shadow-strong: 0 12px 48px rgba(0, 0, 0, 0.5);
+    
+    /* Animation */
+    --duration-fast: 200ms;
+    --duration-normal: 300ms;
+    --duration-slow: 500ms;
+    --ease-standard: cubic-bezier(0.4, 0.0, 0.2, 1);
+    --ease-in: cubic-bezier(0.4, 0.0, 1, 1);
+    --ease-out: cubic-bezier(0.0, 0.0, 0.2, 1);
+    --ease-sharp: cubic-bezier(0.4, 0.0, 0.6, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-surface;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-border-strong rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-foreground-muted;
+  }
+}
+
+@layer utilities {
+  /* Text gradients */
+  .text-gradient-primary {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(to right, hsl(var(--accent-primary)), hsl(var(--accent-secondary)));
+  }
+  
+  .text-gradient-tertiary {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(to right, hsl(var(--accent-tertiary)), hsl(var(--accent-primary)));
+  }
+  
+  /* Glass morphism effects */
+  .glass {
+    background: var(--glass-light-bg);
+    backdrop-filter: blur(var(--glass-light-blur));
+    -webkit-backdrop-filter: blur(var(--glass-light-blur));
+    border: 1px solid var(--glass-light-border);
+    box-shadow: var(--glass-shadow);
+  }
+  
+  .glass-light {
+    background: var(--glass-light-bg);
+    backdrop-filter: blur(var(--glass-light-blur));
+    -webkit-backdrop-filter: blur(var(--glass-light-blur));
+    border: 1px solid var(--glass-light-border);
+    box-shadow: var(--glass-shadow);
+  }
+  
+  .glass-medium {
+    background: var(--glass-medium-bg);
+    backdrop-filter: blur(var(--glass-medium-blur));
+    -webkit-backdrop-filter: blur(var(--glass-medium-blur));
+    border: 1px solid var(--glass-medium-border);
+    box-shadow: var(--glass-shadow);
+  }
+  
+  .glass-strong {
+    background: var(--glass-strong-bg);
+    backdrop-filter: blur(var(--glass-strong-blur));
+    -webkit-backdrop-filter: blur(var(--glass-strong-blur));
+    border: 1px solid var(--glass-strong-border);
+    box-shadow: var(--glass-shadow-strong);
+  }
+  
+  /* Fallback for browsers without backdrop-filter support */
+  @supports not (backdrop-filter: blur(10px)) {
+    .glass,
+    .glass-light,
+    .glass-medium,
+    .glass-strong {
+      background: hsl(var(--surface));
+    }
+  }
+  
+  /* Glow effects */
+  .glow-primary {
+    box-shadow: 0 0 20px hsl(var(--accent-primary) / 0.3);
+  }
+  
+  .glow-secondary {
+    box-shadow: 0 0 20px hsl(var(--accent-secondary) / 0.3);
+  }
+}
+
