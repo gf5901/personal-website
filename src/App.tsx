@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Linkedin, Mail, Check, Code, Layers, Wrench, Sparkles, Briefcase, Users, Award, BookOpen } from 'lucide-react';
+import { Linkedin, Mail, Check, Code, Layers, Wrench, Sparkles, Briefcase, Users, Award } from 'lucide-react';
 import { profileData } from './data/profile';
 import { Heading, Text, ButtonText } from './components/typography';
 import { ExperienceCard } from './components/experience';
@@ -9,7 +9,6 @@ import { ProjectCard } from './components/projects';
 import { SocialButton } from './components/social';
 import { EducationCard } from './components/education';
 import { SkillsCategoryCard } from './components/skills';
-import { BlogCard } from './components/blog';
 
 function App() {
   const containerVariants = {
@@ -278,51 +277,6 @@ function App() {
               <EducationCard key={index} education={edu} index={index} />
             ))}
           </div>
-        </Section>
-      )}
-
-      {/* Articles Section */}
-      {profileData.blog && profileData.blog.length > 0 && (
-        <Section id="articles" background="background">
-          <SectionHeading>Articles</SectionHeading>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-8">
-            {profileData.blog.slice(0, 3).map((post, index) => {
-              const accentColors = [
-                'hsl(var(--accent-primary))',
-                'hsl(var(--accent-secondary))',
-                'hsl(var(--accent-tertiary))',
-              ];
-              const accentColor = accentColors[index % accentColors.length];
-
-              return (
-                <BlogCard
-                  key={post.id}
-                  post={post}
-                  index={index}
-                  accentColor={accentColor}
-                />
-              );
-            })}
-          </div>
-
-          {profileData.blog.length > 3 && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-center"
-            >
-              <Link
-                to="/articles"
-                className="px-8 py-4 bg-primary text-primary-foreground rounded-sm hover:bg-primary-hover transition-all duration-fast ease-out glow-primary flex items-center gap-2 mx-auto"
-              >
-                <BookOpen className="w-5 h-5" />
-                <ButtonText>View All Articles ({profileData.blog.length} articles)</ButtonText>
-              </Link>
-            </motion.div>
-          )}
         </Section>
       )}
 

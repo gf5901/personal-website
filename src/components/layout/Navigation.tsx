@@ -9,16 +9,12 @@ export const Navigation: React.FC = () => {
 
   const navItems = [
     { path: '/work', label: 'Work', accentColor: 'hsl(var(--accent-primary))' },
-    { path: '/articles', label: 'Articles', accentColor: 'hsl(var(--accent-secondary))' },
     { path: '/about', label: 'About', accentColor: 'hsl(var(--accent-tertiary))' },
   ];
 
   const isActive = (path: string) => {
     if (path === '/work') {
       return location.pathname === '/work';
-    }
-    if (path === '/articles') {
-      return location.pathname.startsWith('/articles') || location.pathname.startsWith('/blog');
     }
     if (path === '/about') {
       return location.pathname === '/about';
