@@ -13,8 +13,7 @@
 
 // Experience ID enum for type-safe linking between experiences and projects
 export enum ExperienceID {
-  DONT_DIE = "dont-die",
-  BLUEPRINT = "blueprint",
+  IMMORTALS = "immortals",
   BETTER_BLOOD = "better-blood",
   OPTO_INVESTMENTS = "opto-investments",
   EOFLIX = "eoflix",
@@ -29,7 +28,7 @@ export enum ExperienceID {
 export const profileData = {
   // Hero Section
   name: "Gregory Fong",
-  title: "Software Engineer at Blueprint Bryan Johnson",
+  title: "Staff Software Engineer at Immortals",
   tagline: "I like to build things that help people live better.",
   bio: "Hi there! My name is Greg, and I'm a software developer based in Bellevue, Washington, and originally from Rigby, Idaho. My mission is to build things that help people live better. I've built software solutions over the past 15 years across many industries such as public safety, private security, eCommerce, real estate, aerospace defense, entertainment media, finance, health, and AI.",
 
@@ -46,7 +45,7 @@ export const profileData = {
   about: {
     heading: "About Me",
     description:
-      "I am currently a Software Engineer at Blueprint, Bryan Johnson's company for human survival and beyond. I am building the Don't Die App while working on achieving optimal health. I've built software solutions over the past 15 years across many industries such as public safety, private security, eCommerce, real estate, aerospace defense, entertainment media, finance, health, and AI. I'm passionate about creating impactful technology that solves real-world problems.",
+      "I am currently a Staff Software Engineer at Immortals, Bryan Johnson's company building the world's best operating system for health. I am leading development of the Immortals App while working on achieving optimal health. I've built software solutions over the past 15 years across many industries such as public safety, private security, eCommerce, real estate, aerospace defense, entertainment media, finance, health, and AI. I'm passionate about creating impactful technology that solves real-world problems.",
     highlights: [
       "15+ years of software development experience",
       "Full-stack expertise with modern technologies",
@@ -58,51 +57,54 @@ export const profileData = {
   // Experience
   experience: [
     {
-      id: ExperienceID.DONT_DIE,
-      title: "Lead Software Engineer",
-      company: "Don't Die",
-      location: "Los Angeles, California, United States · Remote",
-      startDate: "Aug 2024",
+      id: ExperienceID.IMMORTALS,
+      title: "Staff Software Engineer",
+      company: "Immortals",
+      location: "Remote",
+      startDate: "Jan 2026",
       endDate: "Present",
-      duration: "1 yr 5 mos",
-      description: "Developed the Don't Die App. Let's not die. Together.",
+      duration: "10 mos",
+      description:
+        "Building with Bryan Johnson and the team at Immortals to provide the world's best operating system for health. Actively recruiting top talent for engineering, product, and design roles. Leading development for greenfield projects like the Immortals App while heavily leveraging the latest in AI development workflows.",
       achievements: [
-        "Built an app that scaled to 130K+ users with no marketing or advertising",
-        "Developed for iOS (4.8 stars), Android (4.5 stars), and Web",
-        "Built Solana based NFT creation pipeline for AI generated passport photos",
+        "Leading development for greenfield projects like the Immortals App",
+        "Actively recruiting top talent for engineering, product, and design roles",
+        "Heavily leveraging the latest in AI development workflows",
       ],
       skills: [
-        "Mobile Application Development",
-        "Blockchain",
-        "Artificial Intelligence (AI)",
-        "Web Development",
+        "Anthropic Claude",
         "Amazon Web Services (AWS)",
+        "Leadership",
       ],
-      logo: "/images/companies/dont-die.jpeg",
+      logo: "",
     },
     {
-      id: ExperienceID.BLUEPRINT,
-      title: "Staff Software Engineer",
-      company: "Blueprint",
+      id: ExperienceID.IMMORTALS,
+      title: "Software Engineer",
+      company: "Immortals",
       location: "Remote",
       startDate: "Aug 2024",
-      endDate: "Present",
-      duration: "1 yr 5 mos",
+      endDate: "Jan 2026",
+      duration: "1 yr 6 mos",
       description:
-        "Building Blueprint Biomarkers with Bryan Johnson and the team at Blueprint to provide the world's best operating system for health.",
+        "Led development of the Don't Die App and Biomarkers by Bryan Johnson at Blueprint (now Immortals).",
       achievements: [
-        "Developed MVP for Blueprint Biomarkers",
-        "Built team of world class backend, frontend, mobile, and AI engineers to build Blueprint Biomarkers V2",
-        "Led development of other software related projects across the company",
+        "Led development of the Don't Die App - a longevity community app with over 150,000 members",
+        "Created Solana based NFT passport system which generated over 10,000 AI generated photos trained on user uploaded photos via Replicate",
+        "Built integrations and digital solutions for microplastics testing and speed of aging testing, which have sold over ten thousand kits",
+        "Led development of Biomarkers by Bryan Johnson, a platform that provides an annual subscription for getting blood tests that you wouldn't normally get at your doctor",
       ],
       skills: [
         "AWS Lambda",
         "PostgreSQL",
+        "Mobile Application Development",
+        "Blockchain",
         "Artificial Intelligence (AI)",
         "React.js",
         "Node.js",
+        "Amazon Web Services (AWS)",
       ],
-      logo: "/images/companies/blueprint.jpeg",
+      logo: "",
     },
     {
       id: ExperienceID.BETTER_BLOOD,
@@ -110,12 +112,12 @@ export const profileData = {
       company: "Better Blood",
       location: "Bellevue, Washington, United States",
       startDate: "Jan 2024",
-      endDate: "Aug 2024",
-      duration: "8 mos",
+      endDate: "Jul 2026",
+      duration: "2 yrs 7 mos",
       description:
-        "I believe health technology should be free to use by everyone, so I created a 503(c)(3) non-profit organization for developing free, private, open source, and AI powered biomarker tracking tools.",
+        "I believe health technology should be accessible and private, so I created a 501(c)(3) non-profit organization for developing open source and AI powered health tracking tools that run locally in the browser.",
       achievements: [
-        "Successfully registered a 503(c)(3) non-profit organization",
+        "Successfully registered a 501(c)(3) non-profit organization",
         "Developed a private biomarker tracking platform using React.js, Google Cloud Platform (GCP), and OpenAI API",
         "Only runs on the browser and never sends data to a server (except for the AI chatbot)",
       ],
@@ -188,7 +190,7 @@ export const profileData = {
     },
     {
       id: ExperienceID.WAYFAIR,
-      title: "Senior Software Engineer",
+      title: "Lead Software Engineer",
       company: "Wayfair",
       location: "Boston, Massachusetts, United States · Remote",
       startDate: "Sep 2021",
@@ -295,14 +297,14 @@ export const profileData = {
       id: ExperienceID.NIKE,
       title: "Senior Full Stack Engineer",
       company: "Nike",
-      location: "Portland, Oregon Area · On-site",
+      location: "Portland, Oregon Metropolitan Area · On-site",
       startDate: "Apr 2017",
       endDate: "Dec 2020",
       duration: "3 yrs 9 mos",
       description:
-        "This is a full stack engineering role on a tiger team which drives software infrastructure monitoring, costs saving, and quality initiatives across Nike's digital commerce organization. I developed tools for monitoring and maintaining infrastructure for Nike's SNKRS drops.",
+        "This is a full stack engineering role on a tiger team which drives software infrastructure monitoring, costs saving, and quality initiatives across Nike's digital commerce organization. I developed tools for monitoring and maintaining infrastructure for Nike's SNKRS drops allowing for the app to scale to handle 2M+ concurrent transactions per second safely.",
       achievements: [
-        "Developed tools for monitoring and maintaining infrastructure for Nike's SNKRS drops",
+        "Developed tools for monitoring and maintaining infrastructure for Nike's SNKRS drops, scaling the app to handle 2M+ concurrent transactions per second safely",
         "Drove software infrastructure monitoring, cost saving, and quality initiatives",
       ],
       skills: [
@@ -367,7 +369,7 @@ export const profileData = {
       id: ExperienceID.SCHAWEL_COLES,
       title: "Front End Web Developer",
       company: "SCHAWEL+COLES",
-      location: "Greater Salt Lake City Area",
+      location: "Salt Lake City Metropolitan Area",
       startDate: "Aug 2013",
       endDate: "Dec 2013",
       duration: "5 mos",
@@ -380,7 +382,7 @@ export const profileData = {
       id: ExperienceID.REI_SYSTEMS,
       title: "PHP App Developer Intern",
       company: "REI Systems",
-      location: "Greater Salt Lake City Area",
+      location: "Salt Lake City Metropolitan Area",
       startDate: "Apr 2013",
       endDate: "Jun 2013",
       duration: "3 mos",
@@ -415,49 +417,99 @@ export const profileData = {
   // Projects
   projects: [
     {
-      title: "Blueprint Biomarkers",
+      title: "Immortals App",
       description:
-        "Science backed and AI driven health platform. Built MVP backend infrastructure using AWS serverless to power labs and health tracking systems.",
+        "Spearheaded the development of the Immortals app, a free app that helps you build a personalized longevity protocol. It's backed by Bryan Johnson's 5+ years of longevity research and informed by your health data.",
+      technologies: ["Anthropic Claude", "Leadership"],
+      link: "", // Add app store link if available
+      github: "", // Add GitHub URL if available
+      image: "", // Add screenshot if available
+      startDate: "Mar 2026",
+      endDate: "Present",
+      experienceId: ExperienceID.IMMORTALS,
+    },
+    {
+      title: "Engawa - Real Estate Command Center",
+      description:
+        "Developed a command center for purchasing and managing real estate properties.",
+      technologies: ["Web Development", "AI Orchestration"],
+      link: "https://engawaie.com/",
+      github: "", // Add GitHub URL if available
+      image: "", // Add screenshot if available
+      startDate: "Jul 2026",
+      endDate: "Jul 2026",
+      // No specific company - personal project
+    },
+    {
+      title: "Cotravel",
+      description: "Travel planning made easy for friends and family.",
+      technologies: ["Anthropic Claude", "React.js"],
+      link: "", // Add live demo URL if available
+      github: "", // Add GitHub URL if available
+      image: "", // Add screenshot if available
+      startDate: "Mar 2026",
+      endDate: "Mar 2026",
+      // No specific company - personal project
+    },
+    {
+      title: "Resilient Comms",
+      description:
+        "When power fails, cell towers go silent. A guide covering mesh network setup, community radio network planning, and off-grid communication for households, neighborhoods, cities, and local governments, anywhere in the world.",
+      technologies: ["Artificial Intelligence (AI)", "Web Development"],
+      link: "", // Add live demo URL if available
+      github: "", // Add GitHub URL if available
+      image: "", // Add screenshot if available
+      startDate: "Mar 2026",
+      endDate: "Mar 2026",
+      // No specific company - personal project
+    },
+    {
+      title: "Biomarkers by Bryan Johnson",
+      description:
+        "Science backed and AI driven health platform. Built MVP backend infrastructure using AWS serverless to power labs and wearable integrations. Designed and built MVP web app and mobile app leveraging NextJS, React Native, and TypeScript. Recruited and hired top talent across engineering, design, and product.",
       technologies: [
         "Amazon Web Services (AWS)",
         "Next.js",
+        "React Native",
+        "TypeScript",
         "Serverless",
-        "AI",
       ],
       link: "https://blueprintbiomarkers.com", // Add live demo URL if available
       github: "", // Add GitHub URL if available
-      image: "/images/projects/blueprint-biomarkers-screenshot-1.png", // Using company logo as project image
-      startDate: "Aug 2024",
-      endDate: "Present",
-      experienceId: ExperienceID.BLUEPRINT,
+      image: "/images/projects/blueprint-biomarkers-screenshot-1.png",
+      startDate: "May 2025",
+      endDate: "Jun 2026",
+      experienceId: ExperienceID.IMMORTALS,
     },
     {
       title: "Don't Die App",
       description:
-        "Health and wellness social app with 100K+ users. Designed and built the mobile app using React Native with blockchain integration.",
+        "Health and wellness social app with 50K+ monthly active users. Designed and built the mobile app using React Native and the AWS infrastructure with serverless, Lambda, RDS, and SQS. Built integrations with wearables like WHOOP, Garmin, and Fitbit. Built BryanAI v1 with AWS Bedrock, server-sent events, and Claude Sonnet 4.6 with context of granted health data.",
       technologies: [
         "React Native",
         "Amazon Web Services (AWS)",
+        "Amazon Bedrock",
+        "Anthropic Claude",
         "Blockchain",
         "Mobile Development",
       ],
       link: "", // Add app store link if available
       github: "", // Add GitHub URL if available
-      image: "/images/projects/dont-die-app-screenshot-1.webp", // Using company logo as project image
+      image: "/images/projects/dont-die-app-screenshot-1.webp",
       startDate: "Aug 2024",
-      endDate: "Present",
-      experienceId: ExperienceID.DONT_DIE,
+      endDate: "Jun 2026",
+      experienceId: ExperienceID.IMMORTALS,
     },
     {
       title: "Better Blood",
       description:
-        "Private biomarker tracking platform developed as a 503(c)(3) non-profit organization to provide free, private health technology to everyone.",
+        "Private biomarker tracking platform developed as a 501(c)(3) non-profit organization to provide free, private health technology to everyone.",
       technologies: ["React.js", "Google Cloud Platform (GCP)", "Health Tech"],
       link: "https://app.betterblood.ai/",
       github: "https://github.com/BetterBloodInc/better-blood-web-app",
       image: "/images/projects/better-blood-screen-shot-1.png",
-      startDate: "Jan 2024",
-      endDate: "Aug 2024",
+      startDate: "Feb 2024",
+      endDate: "Jul 2024",
       experienceId: ExperienceID.BETTER_BLOOD,
     },
     {
@@ -479,6 +531,30 @@ export const profileData = {
       startDate: "May 2022",
       endDate: "Aug 2024",
       experienceId: ExperienceID.EOFLIX,
+    },
+    {
+      title: "Wayfair Ireland Expansion",
+      description:
+        "Led the team for completing search functionality related to the launch of Wayfair's Ireland website. Coordinated with many teams to ensure search functionality was working correctly on the new site. Managed tasks and oversaw the completion of the necessary implementation work.",
+      technologies: [],
+      link: "https://wayfair.ie",
+      github: "", // Add GitHub URL if available
+      image: "", // Add screenshot if available
+      startDate: "Jan 2022",
+      endDate: "Jun 2022",
+      experienceId: ExperienceID.WAYFAIR,
+    },
+    {
+      title: "CrackaJack Digital Solutions Website",
+      description:
+        "Designed and built the company website using React and AWS serverless services.",
+      technologies: ["Amazon Web Services (AWS)", "React.js"],
+      link: "", // Add live demo URL if available
+      github: "", // Add GitHub URL if available
+      image: "", // Add screenshot if available
+      startDate: "Feb 2022",
+      endDate: "Apr 2022",
+      // No specific company - freelance project
     },
     {
       title: "Midgard",
