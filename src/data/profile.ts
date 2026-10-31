@@ -76,7 +76,7 @@ export const profileData = {
         "Amazon Web Services (AWS)",
         "Leadership",
       ],
-      logo: "",
+      logo: "/images/companies/immortals.png",
     },
     {
       id: ExperienceID.IMMORTALS,
@@ -104,7 +104,7 @@ export const profileData = {
         "Node.js",
         "Amazon Web Services (AWS)",
       ],
-      logo: "",
+      logo: "/images/companies/immortals.png",
     },
     {
       id: ExperienceID.BETTER_BLOOD,
