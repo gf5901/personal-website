@@ -16,7 +16,7 @@
     "lucide-react": "^0.562.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^7.11.0"
+    "react-router-dom": "^7.18.0"
   },
   "devDependencies": {
     "@types/node": "^22.5.5",
@@ -31,10 +31,13 @@
     "tailwindcss": "^3.4.13",
     "tsup": "^8.3.5",
     "typescript": "^5.6.2",
-    "vite": "^5.4.2"
+    "vite": "^6.4.4"
   },
   "volta": {
     "node": "22.23.4",
     "yarn": "1.22.22"
+  },
+  "resolutions": {
+    "compression": "^1.8.2"
   }
 }
