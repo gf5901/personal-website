@@ -1,22 +1,12 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import { TimelineDot } from "./TimelineDot";
 
 export interface TimelineItemProps {
   children: React.ReactNode;
   accentColor: string;
   index: number;
-  variants?: {
-    hidden: { opacity: number; y: number };
-    visible: {
-      opacity: number;
-      y: number;
-      transition: {
-        duration: number;
-        ease: number[];
-      };
-    };
-  };
+  variants?: Variants;
   className?: string;
 }
 
@@ -34,7 +24,7 @@ export const TimelineItem: React.FC<TimelineItemProps> = ({
       y: 0,
       transition: {
         duration: 0.6,
-        ease: [0.4, 0.0, 0.2, 1],
+        ease: [0.4, 0.0, 0.2, 1] as [number, number, number, number],
       },
     },
   };

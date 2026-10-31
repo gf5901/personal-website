@@ -1,11 +1,11 @@
 import React from 'react';
 import { cn } from '../../lib/utils';
 
-export interface TextProps extends React.HTMLAttributes<HTMLElement> {
+interface TextOwnProps<C extends React.ElementType> {
   /**
-   * The HTML element to render
+   * The element or component to render (e.g. 'p', 'span', 'a', or a router Link)
    */
-  as?: 'p' | 'span' | 'div' | 'label' | 'a';
+  as?: C;
   /**
    * Visual variant of the text
    */
@@ -24,6 +24,9 @@ export interface TextProps extends React.HTMLAttributes<HTMLElement> {
   className?: string;
   children: React.ReactNode;
 }
+
+export type TextProps<C extends React.ElementType = 'p'> = TextOwnProps<C> &
+  Omit<React.ComponentPropsWithoutRef<C>, keyof TextOwnProps<C>>;
 
 const variantStyles = {
   body: 'text-base text-foreground',
@@ -47,16 +50,16 @@ const caseStyles = {
   capitalize: 'capitalize',
 };
 
-export const Text: React.FC<TextProps> = ({
-  as = 'p',
+export const Text = <C extends React.ElementType = 'p'>({
+  as,
   variant = 'body',
   relaxed = false,
   case: caseStyle,
   className,
   children,
   ...props
-}) => {
-  const Component = as;
+}: TextProps<C>) => {
+  const Component: React.ElementType = as || 'p';
   const baseStyles = variantStyles[variant];
   
   // Default casing based on variant (Riot Games style)

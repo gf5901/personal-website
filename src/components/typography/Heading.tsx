@@ -57,7 +57,7 @@ export const Heading: React.FC<HeadingProps> = ({
   children,
   ...props
 }) => {
-  const Component = as || (defaultElements[variant] as keyof JSX.IntrinsicElements);
+  const Component = as || defaultElements[variant];
   const baseStyles = variantStyles[variant];
   
   // Default casing based on variant (Riot Games style)

@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, type HTMLMotionProps } from 'framer-motion';
 import { cn } from '../../lib/utils';
 
 export interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {
@@ -126,7 +126,8 @@ export const Badge: React.FC<BadgeProps> = ({
         }}
         whileTap={{ scale: 0.98 }}
         transition={{ duration: 0.2, ease: [0.4, 0.0, 0.2, 1] }}
-        {...props}
+        // Native drag/animation handlers have different signatures on motion components
+        {...(props as HTMLMotionProps<'span'>)}
       >
         {children}
       </motion.span>
