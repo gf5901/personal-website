@@ -7,6 +7,7 @@ import Experience from './pages/Experience';
 import Work from './pages/Work';
 import About from './pages/About';
 import ProjectDetail from './pages/ProjectDetail';
+import BillsMailPrivacy from './pages/BillsMailPrivacy';
 import { ScrollToTop } from './components/layout/ScrollToTop';
 
 const container = document.getElementById('root');
@@ -25,6 +26,7 @@ root.render(
         <Route path="/work" element={<Work />} />
         <Route path="/about" element={<About />} />
         <Route path="/projects/:slug" element={<ProjectDetail />} />
+        <Route path="/privacy/bills-mail" element={<BillsMailPrivacy />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
